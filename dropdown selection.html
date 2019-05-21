@@ -1,0 +1,228 @@
+<html>
+
+<head>
+
+    <title> Dropdown</title>
+
+    <script>
+
+        $(document).ready(function () {
+
+            //             var slider = document.getElementById("myRange");
+            // var output = document.getElementById("demo");
+            // output.innerHTML = slider.value;
+
+            // slider.oninput = function() {
+            //   output.innerHTML = this.value;
+            // }
+            $("#main").show();
+                $("#rentcost").hide();
+                $("#sellcost").show();
+
+
+            $("#sell").click(function () {
+
+                $("#main").show();
+                $("#rentcost").hide();
+                $("#sellcost").show();
+
+            });
+
+            $("#rent").click(function () {
+
+                $("#main").show();
+                $("#rentcost").show();
+                $("#sellcost").hide();
+
+            });
+
+
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+        <div class="container">
+                <h3>Pills</h3>
+                <ul class="nav nav-pills">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#">Menu 1</a></li>
+                  <li><a href="#">Menu 2</a></li>
+                  <li><a href="#">Menu 3</a></li>
+                </ul>
+              </div>
+
+    <button  id="sell" class="btn btn-primary" style="display: inline-block;">Buy </button>
+    <button id="rent" class="btn btn-danger" style="display: inline-block;">Rent </button>
+
+    <div id="main">
+        <div>
+            <label> Ad Title: </label>
+            <input type="textarea" class="form-control"> </input>
+
+        </div>
+
+        <div>
+            <label> Home Type: </label>
+            <select id="hometype" name="hometype" >
+                <optgroup label="Flat">
+                    <option>1 Bhk</option>
+                    <option>2 Bhk</option>
+                    <option>3 Bhk</option>
+                    <option>1 Rk</option>
+                    <option>converted 1bhk</option>
+                </optgroup>
+                <optgroup label="Home/villa">
+                    <option>ground floor - chawl</option>
+                    <option>First floor - chawl</option>
+                    <option>Second floor - chawl</option>
+                </optgroup>
+            </select>
+
+        </div>
+
+        <!-- Sell     -->
+        <div id="sellcost">
+            <div>
+                <label> Property Cost</label>
+                <input type="number" />
+                <h6 style="display: inline-block;">Lakhs </h6>
+            </div>
+
+            <div>
+                <label> Eligiable for Home Loan</label>
+                <select id="hometype" name="hometype">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+            </div>
+
+        </div>
+
+
+
+        <!-- Sell     -->
+
+
+
+        <!-- Rent-->
+        <div id="rentcost">
+            <div>
+                <label> Deposit</label>
+                <input type="number" />
+            </div>
+
+
+
+
+            <div>
+                <label> Rent</label>
+                <input type="number" />
+            </div>
+
+            <div>
+                <label> Agreement Period:</label>
+                <input type="number" value="11" style="display: inline-block;" />
+                <h6 style="display: inline-block;">months </h6>
+            </div>
+
+        </div>
+
+        <!-- Rent-->
+
+        <div>
+            <label> Contact no</label>
+            <input type="number" maxlength="10" />
+            <label> Display</label>
+            <select id="Displaynumber" name="hometype">
+                <option>Show to all</option>
+                <option>Only for registered buyers</option>
+                <option>only requested buyers</option>
+            </select>
+            <p> <small> prefer only for registered buyers for max reach to genuine buyers </small> </p>
+        </div>
+
+        <div>
+            <label> Address</label>
+            <input type="text" placeholder="Line 1" />
+            <input type="text" placeholder="Line 2" />
+            <input type="text" placeholder="Locality" />
+            <input type="text" value="Mumbai" readonly />
+            <input type="number" placeholder="7-digit" />
+        </div>
+
+        <div>
+            <label> Message to Buyers</label>
+            <textarea name="" id="" cols="30" rows="5"></textarea>
+        </div>
+
+    </div>
+
+
+
+
+
+    <h5> I'm looking for
+        <select id="search" name="search">
+            <option selected>Buying</option>
+            <option>Rent</option>
+        </select>
+
+        in <input type="text"> </input>
+
+        <button class="btn btn-elegant">Search </button>
+
+    </h5>
+
+    <h5 style="display: inline-block;"> Price Range: </h5>
+    <div style="width: 25%; display: inline-block;">
+        <input type="range" min="5" max="200" value="100" class="slider" id="myRange">
+        <p>Value: <span id="demo"></span> Lakhs</p>
+    </div>
+
+
+    <h5 style="display: inline-block;"> Room Type: </h5>
+    <select id="hometype" name="hometype" multiple class="selectpicker" multiple data-live-search="true">
+        <optgroup label="Flat">
+            <option>1 Bhk</option>
+            <option>2 Bhk</option>
+            <option>3 Bhk</option>
+            <option>1 Rk</option>
+            <option>converted 1bhk</option>
+        </optgroup>
+        <optgroup label="Home/villa">
+            <option>ground floor - chawl</option>
+            <option>First floor - chawl</option>
+            <option>Second floor - chawl</option>
+        </optgroup>
+    </select>
+
+
+    <select class="mdb-select md-form" multiple>
+        <optgroup label="team 1">
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+        </optgroup>
+        <optgroup label="team 2">
+            <option value="3">Option 3</option>
+            <option value="4">Option 4</option>
+        </optgroup>
+    </select>
+    <button class="btn-save btn btn-primary btn-sm">Save</button>
+
+
+
+
+
+</body>
+
+
+
+<style>
+</style>
+
+</html>
